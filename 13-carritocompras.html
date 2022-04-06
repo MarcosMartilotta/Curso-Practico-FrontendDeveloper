@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+          --white: #FFFFFF;
+          --black: #000000;
+          --very-light-pink: #C7C7C7;
+          --text-input-field: #F7F7F7;
+          --hospital-green: #ACD9B2;
+          --sm: 14px;
+          --md: 16px;
+          --lg: 18px;
+        }
+        body {
+          margin: 0;
+          font-family: 'Quicksand', sans-serif;
+        }
+
+
+        .order-container{
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(230px, autofill); 
+            place-content: center;
+            margin-top: 24px;
+        }
+        
+        .title {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .title img {
+            transform: rotate(180deg);
+            margin-right: 12px  ;
+        }
+        .orders-card {
+            width: 400px;
+        }
+
+        .orders-card div {
+            margin: 16px 0px 16px 0px;
+        }
+
+        .order-container > p {
+            font-weight: bold;
+        }
+        .my-order{
+            background-color: var(--very-light-pink);
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+        }
+
+
+        .my-order div {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .my-order div span:nth-child(1) {
+            font-weight: bold;
+        }
+
+        .my-order p {
+            color: #222222;
+            font-weight: bold;
+        }
+
+
+        .article {
+            display: flex;
+            place-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+
+        .article div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .article div img {
+            margin-left: 36px;
+        }
+
+        .article figure {
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .article figure img{
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 0;
+            margin-right: 12px;
+            padding: 0;
+        }
+        
+        .article figure p {
+            color: var(--very-light-pink) !important;
+            font-size: var(--sm);
+            font-weight: 300 !important;
+        }
+
+        .article p:last-child{
+            font-weight: bold;
+            color: #222222;
+            right: 0px;
+        }
+        .primary-button {
+            background-color: var(--hospital-green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            font-size: var(--md);
+            cursor: pointer;
+            font-weight: bold;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (max-width: 640px) {
+            .title {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="order-container">
+        <div class="title">
+            <img src="./assets/icons/flechita.svg" alt="arrow">
+            <p>Shopping cart</p>
+        </div>
+        <div class="orders-card">
+            <div class="article">
+                <figure>
+                    <img src="https://images.pexels.com/photos/7915211/pexels-photo-7915211.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Product" class="product-img">
+                    <p>Keyboard</p>
+                </figure>
+                <div>
+                    <p>$200</p>
+                    <img src="./assets/icons/icon_close.png">
+                </div>
+            </div>
+            <div class="my-order">
+                <div>
+                    <span>Total</span>
+                </div>
+                <p>$560.00</p>   
+            </div>
+            <button class="primary-button add-to-cart-button">
+                Checkout
+            </button>
+        </div>
+</body>
+
+</html>
